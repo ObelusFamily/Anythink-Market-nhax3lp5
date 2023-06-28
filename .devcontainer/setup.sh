@@ -2,6 +2,7 @@ WILCO_ID="`cat .wilco`"
 ENGINE_EVENT_ENDPOINT="${ENGINE_BASE_URL}/users/${WILCO_ID}/event"
 CODESPACE_BACKEND_HOST="${CODESPACE_NAME}-3000.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
 CODESPACE_BACKEND_URL="https://${CODESPACE_BACKEND_HOST}"
+OPENAI_API_KEY="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"
 
 # Update engine that codespace started for user
 curl -L -X POST "${ENGINE_EVENT_ENDPOINT}" -H "Content-Type: application/json" --data-raw "{ \"event\": \"github_codespace_started\" }"
